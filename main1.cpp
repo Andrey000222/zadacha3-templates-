@@ -1,16 +1,16 @@
-#include"Error.h"
 #include"kod.h"
+#include"kod.cpp"
 auto main() -> int {
 	try {
-		IntegerArray a(5);
+		IntegerArray<int> a(5);
 		a.enum_array();// array enumeration
 		a.new_array_size(10);//new size
-		a.enum_array();// array enumeration
+		a.enum_array();
 		a.chang_num_array(2);//change the number in the array, the count is from 1
-		a.enum_array();// enumeration of the array1
+		a.enum_array();
 		a.remov_elem_array(5);//deleting an element with copying, counting from 1
 		a.enum_array();
-		IntegerArray b(a, 15);//a new array with copying of another
+		IntegerArray<int> b(a, 15);//a new array with copying of another
 		b.enum_array();
 		a.search_nam(5); // searching for a number in the array
 		b.begin_nam(666);//add a number to the beginning of the array
